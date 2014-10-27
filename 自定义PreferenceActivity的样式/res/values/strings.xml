@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shared</string>
+    <string name="hello_world">Hello world!</string>
+
+    <drawable name="bgColor">#ededed</drawable>
+    <drawable name="itemBgColor">#fefefe</drawable>
+    <drawable name="itemSelectColor">#f0f0f0</drawable>
+    <drawable name="itemLineColor">#e6e6e6</drawable>
+    <drawable name="itemdisabled">#f3f3f4</drawable>
+
+    
+</resources>

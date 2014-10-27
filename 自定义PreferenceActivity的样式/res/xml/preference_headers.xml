@@ -1,0 +1,45 @@
+
+<preference-headers
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout="@layout/prefs_category_widget">
+        
+    <!-- 
+    	fragment fragment对象
+    	icon 左边的图片 
+    	title 标题
+    	summary 子标题
+    	-->
+    <header android:fragment="com.kale.shared.MainActivity$Prefs0Fragment"
+        	android:layout="@layout/preference_item"
+            android:icon="@drawable/appstore"
+            android:title="标题  header00"
+            android:summary="子标题" />
+    
+    <header android:fragment="com.kale.shared.MainActivity$Prefs1Fragment"
+            android:icon="@drawable/itunes"
+            android:title="Prefs header01"
+            android:summary="An example of some preferences." />
+
+    <header android:fragment="com.kale.shared.MainActivity$Prefs2Fragment"
+            android:icon="@drawable/camera"
+            android:title="Prefs header02"
+            android:summary="Some other preferences you can see.">
+        <!-- Arbitrary key/value pairs can be included with a header as
+             arguments to its fragment. -->
+        <extra 
+            android:name="someKey" 
+            android:value="someHeaderValue" />
+    </header>
+
+    <!-- 
+    	intent 指定一个对象
+     -->
+    <header android:icon="@drawable/calculator"
+            android:title="Intent"
+            android:summary="Launches an Intent.">
+        <!-- Intent标签来启动一个对象 -->
+        <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.android.com" />
+    </header>
+
+</preference-headers>

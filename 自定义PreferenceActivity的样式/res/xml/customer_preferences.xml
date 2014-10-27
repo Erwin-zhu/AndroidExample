@@ -1,0 +1,122 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:layout="@layout/prefs_category_widget"
+        android:title="第一个模块的标题" >
+
+        <!-- 设置单选模块 -->
+        <CheckBoxPreference
+            android:icon="@drawable/appstore"
+            android:key="checkbox_preference"
+            android:layout="@layout/preference_item"
+            android:summary="整个布局都是自定义的，包括图标、文字、点击效果和单选按钮"
+            android:title="标题"
+            android:widgetLayout="@layout/checkbox_preference_widget" />
+
+        <MultiSelectListPreference
+            android:layout="@layout/preference_item"
+            android:entries="@array/floatColor"
+            android:entryValues="@array/floatColor_value"
+            android:key="multSelect_preference"
+            android:summary="点击可以选择多个选项"
+            android:title="多选列表" />
+
+        <RingtonePreference
+            android:layout="@layout/preference_item"
+            android:key="ringtone_preference"
+            android:summary="点击选择铃声"
+            android:title="铃声选择列表" />
+
+        <SwitchPreference
+            android:layout="@layout/preference_item"
+            android:key="switch_preference"
+            android:summaryOff="已关闭"
+            android:summaryOn="已开启"
+            android:switchTextOff="close"
+            android:switchTextOn="open"
+            android:title="开关" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/prefs_category_widget"
+        android:title="第二个模块的标题" >
+
+        <!-- 设置输入框模块 -->
+        <EditTextPreference
+            android:layout="@layout/preference_item"
+            android:dialogIcon="@drawable/itunes"
+            android:dialogTitle="dialog_title_edittext_preference"
+            android:key="edittext_preference"
+            android:negativeButtonText="cancel"
+            android:positiveButtonText="ok"
+            android:title="文本输入" />
+
+        <!-- 选择列表模块 -->
+        <ListPreference
+            android:layout="@layout/preference_item"
+            android:dialogTitle="dialog_title_list_preference"
+            android:entries="@array/floatColor"
+            android:entryValues="@array/floatColor_value"
+            android:key="list_preference"
+            android:summary="点击后会弹出一个单选列表来选择数据"
+            android:title="列表选择框" />
+    </PreferenceCategory>
+
+    <!-- 点击后又启动一个fragment -->
+    <PreferenceCategory
+        android:layout="@layout/prefs_category_widget">
+
+        <!--
+             This PreferenceScreen tag sends the user to a new fragment of
+             preferences.  If running in a large screen, they can be embedded
+             inside of the overall preferences UI.
+        -->
+        <PreferenceScreen
+            android:layout="@layout/preference_item"
+            android:fragment="com.kale.shared.MainActivity$Prefs1FragmentInner"
+            android:summary="点击后跳到另一个fragment_preference"
+            android:title="另一个fragment_preference" >
+
+            <!-- Arbitrary key/value pairs can be included for fragment arguments -->
+            <extra
+                android:name="someKey"
+                android:value="somePrefValue" />
+        </PreferenceScreen>
+
+        <!--
+             This PreferenceScreen tag sends the user to a completely different
+             activity, switching out of the current preferences UI.
+        -->
+        <PreferenceScreen
+            android:layout="@layout/preference_item"
+            android:icon="@drawable/ic_launcher"
+            android:summary="点击后跳转到 http://www.android.com"
+            android:title="点击触发intent动作" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.android.com" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/prefs_category_widget"
+        android:title="第四个模块的标题" >
+        <CheckBoxPreference
+            android:layout="@layout/preference_item"
+            android:icon="@drawable/ic_launcher"
+            android:key="parent_checkbox_preference"
+            android:summary="点击后才可以让子控件可操作"
+            android:title="父选择控件"
+            android:widgetLayout="@layout/checkbox_preference_widget" />
+
+        <!-- The visual style of a child is defined by this styled theme attribute. -->
+        <!-- 子控件关联父控件，如果父控件选中后子控件才可用 -->
+        <!--  android:layout="?android:attr/preferenceLayoutChild" -->
+        <CheckBoxPreference
+            android:dependency="parent_checkbox_preference"
+            android:icon="@drawable/calculator"
+            android:key="child_checkbox_preference"
+            android:layout="@layout/preference_item"
+            android:title="子控件（依托于父控件）"
+            android:widgetLayout="@layout/checkbox_preference_widget" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

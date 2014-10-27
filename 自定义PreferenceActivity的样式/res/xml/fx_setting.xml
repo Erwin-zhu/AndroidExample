@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<PreferenceCategory android:title="显示">
+
+	 	<ListPreference  
+	        android:key="fxColor"  
+	        android:title="图标"  
+	        android:summary="设置悬浮窗的图标"  
+	        android:dialogTitle="图标"  
+	        android:entries="@array/floatColor"  
+	        android:defaultValue="white"
+	        android:entryValues="@array/floatColor_value"/> 
+		<EditTextPreference
+			android:key="fxText"
+			android:title="文字"
+			android:summary="悬浮窗上显示的文字"
+			android:dialogTitle="自定义文字"
+			android:defaultValue="f"/>
+
+		
+    </PreferenceCategory>
+    
+	<PreferenceCategory android:title="功能">
+	   	<ListPreference  
+	        android:key="fxOnTouch"  
+	        android:title="点击"  
+	        android:summary="设置点击悬浮窗后的功能"  
+	        android:dialogTitle="点击后触发的功能"  
+	        android:entries="@array/onTouch"  
+	        android:entryValues="@array/onTouch_value"
+	        android:defaultValue="touch_01"/> 
+	    <ListPreference  
+	        android:key="fxlongClick"  
+	        android:title="长按"  
+	        android:summary="设置长按悬浮窗后的功能"  
+	        android:dialogTitle="长按后触发的功能"  
+	        android:entries="@array/longClick"  
+	        android:entryValues="@array/longClick_value"
+	        android:defaultValue="long_01"/> 
+	</PreferenceCategory>
+
+</PreferenceScreen>

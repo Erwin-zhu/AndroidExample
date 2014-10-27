@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="背景灯光组" >
+
+        <!-- 列边框 -->
+        <ListPreference
+            android:defaultValue="white"
+            android:dialogTitle="请选择灯光强度"
+            android:entries="@array/floatColor"
+            android:entryValues="@array/floatColor_value"
+            android:key="light"
+            android:summary="请选择灯光强度"
+            android:title="灯光强度" />
+
+        <EditTextPreference
+            android:defaultValue="f"
+            android:dialogTitle="自定义文字"
+            android:key="fxText"
+            android:summary="悬浮窗上显示的文字"
+            android:title="文字" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="文字显示组" >
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dialogTitle="点击后触发的功能"
+            android:key="autoScroll"
+            android:summaryOff="关闭"
+            android:summaryOn="开启"
+            android:title="自动滚动" />
+
+        <ListPreference
+            android:defaultValue="long_01"
+            android:dialogTitle="长按后触发的功能"
+            android:entries="@array/longClick"
+            android:entryValues="@array/longClick_value"
+            android:key="fxlongClick"
+            android:summary="设置长按悬浮窗后的功能"
+            android:title="长按" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

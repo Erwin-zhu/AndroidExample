@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="floatColor">
+        <item>白</item>
+        <item>蓝</item>
+        <item>灰</item>
+        <item>胖丁</item>
+        <item>布丁</item>
+        <item>皮卡丘</item>
+    </string-array>
+    
+    <string-array name="floatColor_value">
+        <item>white</item>
+        <item>blue</item>
+        <item>gray</item>
+        <item>pangding</item>
+        <item>buding</item>
+        <item>pikaqiu</item>
+    </string-array>
+    
+    <string-array name="netfloatColor">
+        <item>透明</item>
+        <item>白色</item>
+        <item>蓝色</item>
+        <item>灰色</item>
+        
+    </string-array>
+    
+    <string-array name="netfloatColor_value">
+        <item>alpha</item>
+        <item>white</item>
+        <item>blue</item>
+        <item>gray</item>
+
+    </string-array>
+    
+    
+    <string-array name="onTouch">
+        <item>查看最近任务</item>
+        <item>模拟HOME键</item>
+        <item>无功能</item>
+    </string-array>
+    
+    <string-array name="onTouch_value">
+        <item>touch_01</item>
+        <item>touch_02</item>
+        <item>touch_03</item>
+    </string-array>
+    
+    <string-array name="longClick">
+        <item>模拟HOME键</item>
+        <item>查看最近任务</item>
+        <item>无功能</item>
+    </string-array>
+    <string-array name="longClick_value">
+        <item>long_01</item>
+        <item>long_02</item>
+        <item>long_03</item>
+    </string-array>
+
+</resources>
